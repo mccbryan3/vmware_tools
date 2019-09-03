@@ -16,7 +16,7 @@ if(-not $(Test-Connection $VIServer)) {
 
 try {
     connect-viserver $VIServer | Out-Null
-} catch {"Error connecting to VI Server : $($_.error)"}
+} catch {"Error connecting to VI Server : $($_.Exception.Message)"}
 
 try {
     $VM = Get-VM $VMName
@@ -24,4 +24,4 @@ try {
         $VM | Get-Snapshot | Where-Object{$_.created -lt $(get-date).AddDays(-7)}  | Remove-Snapshot
         $VM | New-Snapshot -Name "backup_snap - $(Get-Date)" -Description "Taken programatically - $(Get-Date)" -Quiesce:$Quiesce
     } else {"Check VM Name..\nSpecified VM not located."}
-} catch {"Error : $($_.error)"}
+} catch {"Error : $($_.Exception.Message)"}
