@@ -52,13 +52,5 @@ if alarm_vm != 'debug_VMWARE_ALARM_EVENT_VM':
     vm = find_vm_obj(content, [vim.VirtualMachine], alarm_vm) 
     
     if vm:
-
-        f = open('output.txt', 'a+')
-        f.write(alarm_name + "\n")
-        f.write(alarm_target_name + "\n" )
-        f.write(event_decscription + "\n")
-        f.write(alarm_value + "\n")
-        f.close()
-      
         vm.setCustomValue('vm.owner', alarm_user)
         vm.setCustomValue('vm.provisioned', str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
