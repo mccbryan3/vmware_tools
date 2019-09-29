@@ -1,4 +1,4 @@
-connect-viserver vc02
+connect-viserver youvcenterserver
 Function Get-VMADCreated {
 
     get-vm | %{
