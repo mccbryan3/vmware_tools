@@ -13,3 +13,7 @@ This one takes snaps using PowerCLI and should be ran from PoSH
 It will also delete any snaps older than 7 days by default
 
 There are flags to change the purge date of the snaps on the target VM - default 7
+
+# vm.get-vm_ad_created.ps1
+
+Reads and exports whenCreated data from AD to a CSV if the VM exists. Outputs DomainState to knoiw if it exists
