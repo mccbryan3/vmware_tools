@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-##
+## Tests
 ## To be ran on the VCSA and called via alarm rule
 ##
 
@@ -33,7 +33,7 @@ if alarm_vm != 'debug_VMWARE_ALARM_EVENT_VM':
     # This is not built into this script
     # Of course "vcenter" and "user" will need to be updated as well
 
-    si = SmartConnect(host="vcenter", user="user", pwd=getpass(), sslContext=s)
+    si = SmartConnect(host="vcenter", user="user", pwd="password", sslContext=s)
     content=si.content
     
     def find_vm_obj(content, vimtype, name):
@@ -51,6 +51,9 @@ if alarm_vm != 'debug_VMWARE_ALARM_EVENT_VM':
     
     vm = find_vm_obj(content, [vim.VirtualMachine], alarm_vm) 
     
+## These attributes must exist in vcenter before writing
+## Feel free to add, remove or change the ones below
+
     if vm:
         vm.setCustomValue('vm.owner', alarm_user)
         vm.setCustomValue('vm.provisioned', str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
