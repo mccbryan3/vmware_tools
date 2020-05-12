@@ -21,3 +21,7 @@ Reads and exports whenCreated data from AD to a CSV if the VM exists. Outputs Do
 # find-vmhost-lun-no-datastore.ps1
 
 Lists luns on vmhosts that are not configured as VMFS datastores are start with  the mpx prefix. This should give you a list to bounce off of a list of RDMs from the VM side. 
+
+# vm.format-uuid_serail_no.js
+
+This formats the VM name based on uuid from BIOS (vmname_uuid) primarily for Ansible Tower use.
