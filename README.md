@@ -25,3 +25,13 @@ Lists luns on vmhosts that are not configured as VMFS datastores are start with 
 # vm.format-uuid_serail_no.js
 
 This formats the VM name based on uuid from BIOS (vmname_uuid) primarily for Ansible Tower use.
+
+# vmware-kernel-vmotion.ps1
+
+This script will convert your vmotion vmkernel port to use the vmotion tcp/ip stack
+
+This script assumes the following.
+
+•	You only have one vmotion vmkernel port
+•	You are not using vmk100
+
