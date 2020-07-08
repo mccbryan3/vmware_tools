@@ -32,6 +32,6 @@ This script will convert your vmotion vmkernel port to use the vmotion tcp/ip st
 
 This script assumes the following.
 
-•	You only have one vmotion vmkernel port
-•	You are not using vmk100
+  * You only have one vmotion vmkernel port
+  * You are not using vmk100
 
