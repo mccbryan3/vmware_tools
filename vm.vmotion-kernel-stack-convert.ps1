@@ -13,7 +13,7 @@ if(($esxcli.network.ip.netstack.list.Invoke()).Key -notcontains "vmotion") {
     $esxcli.network.ip.netstack.add.invoke(@{netstack='vmotion'})
 }
 
-## 
+## Add the replacement vmkernel port
 $esxcli.network.ip.interface.add.Invoke(@{
     interfacename='vmk100';
     portgroupname=$vmk_vmotion.PortGroupName;
