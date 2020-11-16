@@ -2,7 +2,7 @@
 
 ## Tests
 ## To be ran on the VCSA and called via alarm rule
-##
+## Comment for push
 
 import sys
 from getpass import getpass
