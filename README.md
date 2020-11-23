@@ -1,5 +1,9 @@
 # vm.alarm-attr.py
 
+Use the requirements file with pip for requiremetns
+
+```pip install -r requirements.txt```
+
 This was built to write attributes to custom attributes on machine creation.
 
 This script shoudl be placed on the VCSA and called from an alarm rule
